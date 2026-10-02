@@ -11,19 +11,19 @@ USERS = {
         "username": "student",
         "password": "student",
         "role": "member",
-        "fullname": "Alex Beginner",
+        "fullname": "Ahmed ben Salah",
         "bio": "First year cybersecurity enthusiast. Love CTFs!",
-        "email": "alex@securinets.club",
-        "joined": "2024-09-01",
+        "email": "ahmed@securinets.club",
+        "joined": "2026-10-07",
         "secret": None
     },
     200: {
         "username": "hacker42",
         "password": "pass123",
         "role": "member",
-        "fullname": "Sam Hacker",
+        "fullname": "Malek Hacker",
         "bio": "Web security researcher. Always hunting for bugs.",
-        "email": "sam@securinets.club",
+        "email": "malek@securinets.club",
         "joined": "2023-11-15",
         "secret": None
     },
@@ -31,9 +31,9 @@ USERS = {
         "username": "crypto_cat",
         "password": "meow",
         "role": "member",
-        "fullname": "Jordan Crypto",
+        "fullname": "mohamed Crypto",
         "bio": "Cryptography nerd. Prefer math over web vulns.",
-        "email": "jordan@securinets.club",
+        "email": "mohamed@securinets.club",
         "joined": "2024-01-20",
         "secret": None
     },
@@ -41,20 +41,20 @@ USERS = {
         "username": "pwn_master",
         "password": "shell",
         "role": "member",
-        "fullname": "Taylor Pwn",
+        "fullname": "Tarek Pwn",
         "bio": "Binary exploitation specialist.",
-        "email": "taylor@securinets.club",
+        "email": "tarek@securinets.club",
         "joined": "2023-08-10",
         "secret": None
     },
     584: {
         "username": "admin",
-        "password": "sup3r_s3cr3t_4dm1n_p4ss",  # not needed for the challenge
+        "password": "sup3r_s3cr3t_4dm1n_p4ss##",  # not needed for the challenge
         "role": "admin",
         "fullname": "Securinets Admin",
         "bio": "Club administrator. Keeper of the secrets.",
         "email": "admin@securinets.club",
-        "joined": "2020-01-01",
+        "joined": "2014-09-01",
         "secret": "Securinets{1d0r_n0t_s0_h4rd_4ft3r_4ll}"
     }
 }

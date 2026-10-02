@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}{{ profile.fullname }} - Profile{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>{{ profile.fullname }}</h1>
+    <p class="subtitle">@{{ profile.username }} · <span class="badge {% if profile.role == 'admin' %}badge-admin{% endif %}">{{ profile.role }}</span></p>
+</div>
+
+<div class="profile-card">
+    <div class="profile-header">
+        <div class="avatar">{{ profile.fullname[0] }}</div>
+        <div class="profile-meta">
+            <p><strong>Email:</strong> {{ profile.email }}</p>
+            <p><strong>Member since:</strong> {{ profile.joined }}</p>
+            <p><strong>Profile ID:</strong> {{ profile_id }}</p>
+        </div>
+    </div>
+
+    <div class="profile-bio">
+        <h3>Bio</h3>
+        <p>{{ profile.bio }}</p>
+    </div>
+
+    {% if profile.secret %}
+    <div class="flag-box">
+        <h3>🔐 Secret / Flag</h3>
+        <p class="flag">{{ profile.secret }}</p>
+        <p class="flag-note">Congratulations! You found the admin's secret.</p>
+    </div>
+    {% else %}
+    <div class="info-card muted">
+        <p>No secret information on this profile.</p>
+    </div>
+    {% endif %}
+</div>
+
+<div class="back-link">
+    <a href="{{ url_for('members') }}">&larr; Back to Members</a>
+    &nbsp;|&nbsp;
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+</div>
+{% endblock %}

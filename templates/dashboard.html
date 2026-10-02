@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Securinets Portal{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Welcome back, {{ user.fullname }}!</h1>
+    <p class="subtitle">Your personal dashboard</p>
+</div>
+
+<div class="card-grid">
+    <div class="card">
+        <h3>Your Profile</h3>
+        <p>View and manage your member profile.</p>
+        <a href="{{ url_for('profile', profile_id=user_id) }}" class="btn btn-secondary">View My Profile</a>
+    </div>
+
+    <div class="card">
+        <h3>Club Members</h3>
+        <p>Browse public profiles of other club members.</p>
+        <a href="{{ url_for('members') }}" class="btn btn-secondary">View Members</a>
+    </div>
+
+    <div class="card">
+        <h3>Your Info</h3>
+        <ul class="info-list">
+            <li><strong>Username:</strong> {{ user.username }}</li>
+            <li><strong>Role:</strong> <span class="badge">{{ user.role }}</span></li>
+            <li><strong>Member since:</strong> {{ user.joined }}</li>
+            <li><strong>Profile ID:</strong> {{ user_id }}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="info-card">
+    <h3>📢 Club Announcement</h3>
+    <p>Welcome new members! Make sure to explore the portal and get familiar with the systems.</p>
+    <p>Remember: security is everyone's responsibility. Always practice good access control!</p>
+</div>
+{% endblock %}

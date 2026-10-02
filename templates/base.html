@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Securinets Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.jpg') }}" type="image/jpeg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Securinets" class="logo">
+            <span>Securinets Member Portal</span>
+        </div>
+        <div class="nav-links">
+            {% if session.get('user_id') %}
+                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                <a href="{{ url_for('members') }}">Members</a>
+                <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Securinets Cybersecurity Club &copy; 2025 | CTF Challenge</p>
+        <p class="hint">Tip: Not every profile is listed publicly...</p>
+    </footer>
+</body>
+</html>

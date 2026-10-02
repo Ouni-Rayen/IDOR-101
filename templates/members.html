@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Members - Securinets Portal{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Club Members</h1>
+    <p class="subtitle">Public member directory</p>
+</div>
+
+<div class="table-container">
+    <table class="members-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Joined</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in members %}
+            <tr>
+                <td>{{ m.id }}</td>
+                <td>{{ m.fullname }}</td>
+                <td>@{{ m.username }}</td>
+                <td><span class="badge">{{ m.role }}</span></td>
+                <td>{{ m.joined }}</td>
+                <td>
+                    <a href="{{ url_for('profile', profile_id=m.id) }}" class="btn btn-small">View Profile</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="info-card">
+    <p>Only public members are shown here. Some profiles may have restricted access.</p>
+</div>
+{% endblock %}

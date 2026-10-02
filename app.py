@@ -18,12 +18,12 @@ USERS = {
         "secret": None
     },
     200: {
-        "username": "hacker42",
+        "username": "LUKI",
         "password": "pass123",
         "role": "member",
-        "fullname": "Malek Hacker",
+        "fullname": "Silver Luki",
         "bio": "Web security researcher. Always hunting for bugs.",
-        "email": "malek@securinets.club",
+        "email": "luki@securinets.club",
         "joined": "2023-11-15",
         "secret": None
     },

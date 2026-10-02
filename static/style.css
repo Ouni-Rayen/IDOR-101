@@ -216,6 +216,38 @@ body {
     text-align: center;
 }
 
+/* Spacing between body text and buttons
+   (the global reset above removes default paragraph margins) */
+p + .btn,
+ul + .btn {
+    margin-top: 1.25rem;
+}
+
+/* Dashboard cards: text on top, button pinned below with a guaranteed gap */
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card p {
+    margin-bottom: 1.25rem;
+}
+
+.card .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Home page: space between the intro text and the login button */
+.hero .btn {
+    margin-top: 1.5rem;
+}
+
+/* Stacked paragraphs inside info cards were touching each other */
+.info-card p + p {
+    margin-top: 0.75rem;
+}
+
 /* Login */
 .login-card {
     max-width: 420px;
